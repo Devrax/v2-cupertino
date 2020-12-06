@@ -1,18 +1,27 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <V2-cupertino @did-present="consol">
+      <HelloWorld />
+    </V2-cupertino>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import V2Cupertino from './components/V2Cupertino.vue';
 import HelloWorld from './components/HelloWorld.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
+    V2Cupertino,
     HelloWorld
+  },
+  methods: {
+    consol: function() {
+      console.log('Fuck');
+    }
   }
 });
 </script>
