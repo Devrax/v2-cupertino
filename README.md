@@ -2,6 +2,7 @@
 
 <img src="https://img.shields.io/badge/vuejs%20-%2335495e.svg?&style=for-the-badge&logo=vue.js&logoColor=%234FC08D"/> <img src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 
+> #### Notes: if your are looking for vue 3 [here Cupertino-Pane for vue 3](https://www.npmjs.com/package/v-cupertino)
 > # Installation
 
 Actually kinda easy
@@ -44,10 +45,10 @@ The component just have one simple slot where you can easily put one or multiple
 ## **Props**
 | props | type | example | comments |
 |-|-|-|-|
-| :drawerOptions ( optional ) | `CupertinoSettings` |  `<v-cupertino :drawerOptions="yourSettingsObject">` | The same as the Cupertinos Options; **constraints** you cannot override cupertino's callbacks even if you specified in the `CupertinoSettings`' Object|
-| :entryAnimation ( optional ) | `Boolean` | `<v-cupertino :entryAnimation="Boolean">` | Whether the drawer should present, destroy or hide with a smooth animation |
-| :entryComponent ( optional ) | `Component` | `<v-cupertino :entryComponent="Component">` | The component itself use slots, but I think it would be faster to toggle between component from scripts instead of using v-if also components remember their state because are wrapped by `<keep-alive>` tag|
-|:isPresent | Boolean | `<v-cupertino :entryComponent="Component">` | Whether the component should be present or hide, when initialize; **default:** true |
+| :drawerOptions ( optional ) | `CupertinoSettings` |  `<v2-cupertino :drawerOptions="yourSettingsObject">` | The same as the Cupertinos Options; **constraints** you cannot override cupertino's callbacks even if you specified in the `CupertinoSettings`' Object|
+| :entryAnimation ( optional ) | `Boolean` | `<v2-cupertino :entryAnimation="Boolean">` | Whether the drawer should present, destroy or hide with a smooth animation |
+| :entryComponent ( optional ) | `Component` | `<v2-cupertino :entryComponent="Component">` | The component itself use slots, but I think it would be faster to toggle between component from scripts instead of using v-if also components remember their state because are wrapped by `<keep-alive>` tag|
+|:isPresent | Boolean | `<v2-cupertino :entryComponent="Component">` | Whether the component should be present or hide, when initialize; **default:** true |
 
 <br>
 <br>
