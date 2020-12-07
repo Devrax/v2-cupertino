@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <V2-cupertino @did-present="consol">
+    <V2-cupertino @did-present="log">
       <HelloWorld />
     </V2-cupertino>
   </div>
@@ -19,8 +19,8 @@ export default Vue.extend({
     HelloWorld
   },
   methods: {
-    consol: function() {
-      console.log('Fuck');
+    log: function() {
+      console.log('Removed funny word :D');
     }
   }
 });
