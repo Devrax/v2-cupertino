@@ -1,6 +1,6 @@
 {
   "name": "v2-cupertino",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "author": {
     "name": "Rafael Mejia"
   },
@@ -54,7 +54,7 @@
     "last 2 versions",
     "not dead"
   ],
-  "description": "A Vue 2 Wrapper for Cupertino Library",
+  "description": "A Vue 2 Wrapper for Cupertino Pane Library",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Devrax/v2-cupertino"
