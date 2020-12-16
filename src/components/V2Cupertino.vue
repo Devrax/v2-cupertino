@@ -1,6 +1,6 @@
 <template>
-  <div class="cupertino-container">
-    <div class="cupertino-pane" ref="pane">
+  <div :class="containerClass">
+    <div :class="classTarget" ref="pane">
       <keep-alive>
         <component :is="entryComponent"></component>
       </keep-alive>
@@ -16,6 +16,8 @@ import Vue from 'vue';
 export interface Data{
   cupertino: CupertinoPane | null;
   staticOpts: {[props: string]: unknown} | null ;
+  containerClass: string;
+  classTarget: string;
 }
 
 export const CUPERTINODEFAULTOPTS: CupertinoSettings = {
@@ -37,6 +39,10 @@ export const CUPERTINODEFAULTOPTS: CupertinoSettings = {
 export default Vue.extend({
   name: "V2Cupertino",
   props: {
+    id: {
+      default: '',
+      type: [String, Number]
+    },
     isPresent: {
       default: true,
       type: Boolean
@@ -57,7 +63,9 @@ export default Vue.extend({
   data() {
     const data: Data = {
       cupertino: null,
-      staticOpts: null
+      staticOpts: null,
+      containerClass: 'cupertino-container',
+      classTarget: 'cupertino-pane'
     };
 
     return data;
@@ -65,7 +73,7 @@ export default Vue.extend({
   methods: {
     initCupertino: function (options: CupertinoSettings): CupertinoPane {
       this.cupertino = new CupertinoPane(
-        ".cupertino-pane",
+        `.${this.classTarget}`,
         options
       ) as CupertinoPane;
 
@@ -118,9 +126,16 @@ export default Vue.extend({
       : (this.cupertino as CupertinoPane).hide();
     }
   },
+  created: function() {
+
+    this.classTarget = `${this.classTarget}${this.id ? '-'+this.id : ''}`;
+    this.containerClass = `${this.containerClass}${this.id ? '-'+this.id : ''}`;
+   
+  },
   mounted: function () {
+
     this.staticOpts = {
-      parentElement: ".cupertino-container",
+      parentElement: `.${this.containerClass}`,
       onDidDismiss: this.didDismiss.bind(this),
       onWillDismiss: this.willDismiss.bind(this),
       onDidPresent: this.didPresent.bind(this),
@@ -133,6 +148,7 @@ export default Vue.extend({
       onTransitionEnd: this.transitionEnd.bind(this)
     };
 
+    
     this.initCupertino(Object.assign(this.drawerOptions, this.staticOpts));
   }
 })

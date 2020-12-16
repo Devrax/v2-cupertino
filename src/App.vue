@@ -4,6 +4,10 @@
     <V2-cupertino @did-present="log">
       <HelloWorld />
     </V2-cupertino>
+
+    <V2-cupertino :drawerOptions="staticOpt" @did-present="log" id="1">
+      <HelloWorld />
+    </V2-cupertino>
   </div>
 </template>
 
@@ -17,6 +21,26 @@ export default Vue.extend({
   components: {
     V2Cupertino,
     HelloWorld
+  },
+  data() {
+    return {
+      staticOpt: {
+        initialBreak: "bottom",
+        inverse: true,
+        breaks: {
+          middle: {
+            enabled: true,
+            height: 500,
+            bounce: true,
+          },
+          bottom: {
+            enabled: true,
+            height: 300,
+            bounce: true,
+          },
+        },
+      }
+    }
   },
   methods: {
     log: function() {
