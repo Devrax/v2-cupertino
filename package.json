@@ -1,6 +1,6 @@
 {
   "name": "v2-cupertino",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "author": {
     "name": "Rafael Mejia"
   },
@@ -21,10 +21,10 @@
     "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/v2-cupertino.min.js"
   },
   "dependencies": {
-    "cupertino-pane": "^1.1.94"
+    "cupertino-pane": "^1.2.1"
   },
   "peerDependencies": {
-    "cupertino-pane": "^1.1.94",
+    "cupertino-pane": "^1.2.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
