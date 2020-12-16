@@ -49,7 +49,7 @@ The component just have one simple slot where you can easily put one or multiple
 | :entryAnimation ( optional ) | `Boolean` | `<v2-cupertino :entryAnimation="Boolean">` | Whether the drawer should present, destroy or hide with a smooth animation |
 | :entryComponent ( optional ) | `Component` | `<v2-cupertino :entryComponent="Component">` | The component itself use slots, but I think it would be faster to toggle between component from scripts instead of using v-if also components remember their state because are wrapped by `<keep-alive>` tag|
 |:isPresent | Boolean | `<v2-cupertino :entryComponent="Component">` | Whether the component should be present or hide, when initialize; **default:** true |
-|:id | Number &#124; String | `<v2-cupertino :id="2"> || <v2-cupertino id="4">` | If you have multiples v2-cupertino components in the same app that might be working in the same time could crash the library cupertino-pane due that all of them are using the same selector class to create a new pane, using custom id, will allow you to use multiples v2-cupertino components as much as you want |
+|:id | Number &#124; String | `<v2-cupertino :id="2">` | If you have multiples v2-cupertino components in the same app that might be working in the same time could crash the library cupertino-pane due that all of them are using the same selector class to create a new pane, using custom id, will allow you to use multiples v2-cupertino components as much as you want |
 
 <br>
 <br>
