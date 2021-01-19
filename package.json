@@ -1,6 +1,6 @@
 {
   "name": "v2-cupertino",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": {
     "name": "Rafael Mejia"
   },
@@ -21,26 +21,17 @@
     "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/v2-cupertino.min.js"
   },
   "dependencies": {
-    "cupertino-pane": "^1.2.1"
+    "cupertino-pane": "^1.2.2"
   },
   "peerDependencies": {
-    "cupertino-pane": "^1.2.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "cupertino-pane": "^1.2.2"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-typescript": "^5.0.2",
     "core-js": "^3.6.5",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
     "rollup": "^1.32.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.29.0",
