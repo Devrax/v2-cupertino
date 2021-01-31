@@ -1,6 +1,6 @@
 {
   "name": "v2-cupertino",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": {
     "name": "Rafael Mejia"
   },
@@ -15,17 +15,17 @@
     "./sfc": "src/components/v2-cupertino.vue"
   },
   "scripts": {
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build": "npm run build:umd && npm run build:es && npm run build:unpkg",
     "build:umd": "rollup --config rollup.config.js --format umd --file dist/v2-cupertino.umd.js",
     "build:es": "rollup --config rollup.config.js --format es --file dist/v2-cupertino.esm.js",
     "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/v2-cupertino.min.js"
   },
   "dependencies": {
-    "cupertino-pane": "^1.2.3"
+    "cupertino-pane": "^1.2.4"
   },
   "peerDependencies": {
     "vue": "^2.6.11",
-    "cupertino-pane": "^1.2.3"
+    "cupertino-pane": "^1.2.4"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
